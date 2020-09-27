@@ -18,8 +18,6 @@ def predict():
     data = [message]
     vect = cv.transform(data)
     my_prediction = clf.predict(vect)
-    print(my_prediction)
-    
     if my_prediction == 1:
         prediction="a spam"
     elif my_prediction == 0:
