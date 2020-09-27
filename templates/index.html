@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ham or Spam</title>
+	<style>
+    body {
+	background-image: url("https://blog.comodo.com/wp-content/uploads/spam-email-filtering-service.png");
+        background-repeat:no-repeat;
+       background-size:cover;
+} 
+</style>
+</head>
+<body>
+		<div class="container">
+		
+		<h1>Spam Detector For SMS</h1>
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		<p>Enter Your Message Here</p>
+		<textarea name="message" rows="10" cols="75"></textarea>
+		<br>
+		<input type="submit" class="btn-info" value="Predict">
+		</form>
+   <br>
+   <br>
+   
+   {{ prediction_text }}
+   
+	</div>
+
+</body>
+</html>
